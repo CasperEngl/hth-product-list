@@ -4,8 +4,8 @@ import * as schema from "./schema";
 import { desc } from "drizzle-orm";
 
 const client = createClient({
-  url: process.env.DATABASE_URL!,
-  authToken: process.env.DATABASE_AUTH_TOKEN!,
+  url: DATABASE_URL!,
+  authToken: DATABASE_AUTH_TOKEN!,
 });
 
 export const db = drizzle(client, { schema, logger: true });
